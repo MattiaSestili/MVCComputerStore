@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerStore.Domain", "ComputerStore.Domain\ComputerStore.Domain.csproj", "{F41A372C-CCF2-444B-A09D-F9E1D9C27A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerStore.WebUI", "ComputerStore.WebUI\ComputerStore.WebUI.csproj", "{AD8C7DA8-72FF-499C-9378-7A4D3B9E639A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F41A372C-CCF2-444B-A09D-F9E1D9C27A73} = {F41A372C-CCF2-444B-A09D-F9E1D9C27A73}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F41A372C-CCF2-444B-A09D-F9E1D9C27A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41A372C-CCF2-444B-A09D-F9E1D9C27A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41A372C-CCF2-444B-A09D-F9E1D9C27A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41A372C-CCF2-444B-A09D-F9E1D9C27A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD8C7DA8-72FF-499C-9378-7A4D3B9E639A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD8C7DA8-72FF-499C-9378-7A4D3B9E639A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD8C7DA8-72FF-499C-9378-7A4D3B9E639A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD8C7DA8-72FF-499C-9378-7A4D3B9E639A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
