@@ -36,7 +36,10 @@ namespace ComputerStore.WebUI.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Products.Count()
+                    TotalItems = type == null ?
+                        repository.Products.Count() :
+                        repository.Products.Where( e => e.Type == type).Count()
+
                 },
 
                 CurrentType = type

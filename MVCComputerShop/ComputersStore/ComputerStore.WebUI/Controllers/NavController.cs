@@ -16,14 +16,16 @@ namespace ComputerStore.WebUI.Controllers
             repository = repo;
         }
 
-        public PartialViewResult Menu()
+        public PartialViewResult Menu(string type = null)
         {
-            IEnumerable<string> type = repository.Products
+            ViewBag.SelectedType = type;
+
+            IEnumerable<string> types = repository.Products
                     .Select(x => x.Type)
                     .Distinct()
                     .OrderBy(x => x);
 
-            return PartialView(type);
+            return PartialView(types);
         }
 
     }
