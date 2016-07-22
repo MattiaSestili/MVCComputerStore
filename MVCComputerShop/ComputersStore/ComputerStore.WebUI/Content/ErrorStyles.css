@@ -2,7 +2,7 @@
     color: #f00;
 }
 
-.field-validation-error {
+.field-validation-valid {
     display: none;
 }
 
@@ -15,6 +15,6 @@
     font-weight: bold; color: #f00;
 }
 
-validation-summary-valid {
+.validation-summary-valid {
     display: none;
 }

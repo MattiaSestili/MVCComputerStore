@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Configuration;
+using ComputerStore.WebUI.Infrastructure.Abstract;
+using ComputerStore.WebUI.Infrastructure.Concrete;
 
 namespace ComputerStore.WebUI.Infrastructure
 {
@@ -42,6 +44,8 @@ namespace ComputerStore.WebUI.Infrastructure
 
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);
+
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
     }
 }

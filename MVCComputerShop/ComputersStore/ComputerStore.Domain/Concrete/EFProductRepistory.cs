@@ -16,5 +16,42 @@ namespace ComputerStore.Domain.Concrete
         {
             get { return context.Products; }
         }
+
+        public void SaveProduct(Product product)
+        {
+            if (product.ProductID == 0)
+            {
+                context.Products.Add(product);
+            }
+            else
+            {
+                Product dbEntry = context.Products.Find(product.ProductID);
+                if(dbEntry != null)
+                {
+                    dbEntry.Brand = product.Brand;
+                    dbEntry.Model = product.Model;
+                    dbEntry.Type = product.Type;
+                    dbEntry.Cpu = product.Cpu;
+                    dbEntry.HardDrive = product.HardDrive;
+                    dbEntry.GraphicCard = product.GraphicCard;
+                    dbEntry.MemoryRam = product.MemoryRam;
+                    dbEntry.Price = product.Price;
+                    dbEntry.ImageData = product.ImageData;
+                    dbEntry.ImageMimeType = product.ImageMimeType;
+                }
+            }
+            context.SaveChanges();
+        }
+
+        public Product DeleteProduct(int productID)
+        {
+            Product dbEntry = context.Products.Find(productID);
+            if(dbEntry != null)
+            {
+                context.Products.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
     }
 }

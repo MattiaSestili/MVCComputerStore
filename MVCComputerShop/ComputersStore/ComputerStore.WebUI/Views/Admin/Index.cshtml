@@ -16,6 +16,7 @@
             <tr>
                 <th class="text-right">ID</th>
                 <th>Brand</th>
+                <th>Model</th>
                 <th class="text-right">Price</th>
                 <th class="text-left">Actions</th>
             </tr>
@@ -24,6 +25,7 @@
                 <tr>
                     <td class="text-right">@item.ProductID</td>
                     <td>@Html.ActionLink(item.Brand, "Edit", new { item.ProductID })</td>
+                    <td>@Html.ActionLink(item.Model, "Edit", new { item.ProductID })</td>
                     <td class="text-right">@item.Price.ToString("c")</td>
                     <td class="text-center">
                         @using (Html.BeginForm("Delete", "Admin"))

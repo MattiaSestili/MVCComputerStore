@@ -1,6 +1,15 @@
 ﻿@model ComputerStore.Domain.Entities.Product
 
 <div class="well">
+
+    @if(Model.ImageData != null)
+    {
+        <div class="pull-left" style="margin-right: 10px">
+            <img class="img-thumbnail" width="240" height="240" 
+                 src="@Url.Action("GetImage", "Product", new { Model.ProductID })" />
+        </div>
+    }
+
     <h3>
         <strong>@Model.Brand</strong>
         <span class="pull-right label label-primary">@Model.Price.ToString("c")</span>
@@ -15,4 +24,9 @@
         </div>
     }
     <span class="lead">@Model.Model</span>
+        <ul>
+            <li>@Model.Cpu</li>
+            <li>@Model.HardDrive</li>
+            <li>@Model.GraphicCard</li>
+        </ul>
 </div>
