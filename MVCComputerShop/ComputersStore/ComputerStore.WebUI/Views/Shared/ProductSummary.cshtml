@@ -25,9 +25,13 @@
     }
 
     <span class="lead">@Model.Model</span>
-        <ul style="margin-left: 200px;">
+        <ul style="position: relative;
+                    left: 20px;">
             <li>@Model.Cpu</li>
             <li>@Model.HardDrive</li>
             <li>@Model.GraphicCard</li>
         </ul>
+
+    <p>@Model.ProductDescription</p>
+
 </div>

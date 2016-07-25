@@ -38,6 +38,7 @@ namespace ComputerStore.Domain.Concrete
                     dbEntry.Price = product.Price;
                     dbEntry.ImageData = product.ImageData;
                     dbEntry.ImageMimeType = product.ImageMimeType;
+                    dbEntry.ProductDescription = product.ProductDescription;
                 }
             }
             context.SaveChanges();

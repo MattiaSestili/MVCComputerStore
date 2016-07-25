@@ -15,9 +15,7 @@ namespace ComputerStore.Domain.Entities
         [Required(ErrorMessage = "Please enter a product brand")]
         public string Brand { get; set; }
         [Required(ErrorMessage = "Please enter a product model")]
-        public string Model { get; set; }
-
-        [DataType(DataType.MultilineText)]
+        public string Model { get; set; }       
         [Required(ErrorMessage = " Please enter a type")]
         public string Type { get; set; }
         [Required(ErrorMessage = "Please enter a Cpu")]
@@ -34,7 +32,8 @@ namespace ComputerStore.Domain.Entities
 
         public byte[] ImageData { get; set; }
         public string ImageMimeType { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string ProductDescription { get; set; }
     }
-
-
 }
