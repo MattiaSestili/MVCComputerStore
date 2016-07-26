@@ -14,7 +14,7 @@ namespace ComputerStore.WebUI.Controllers
     {
         private IProductsRepository repository;
         public int PageSize = 4;
-        
+
         //remove Index Action Methodd replace with a constructor
         public ProductController(IProductsRepository productRepository)
         {
@@ -38,7 +38,7 @@ namespace ComputerStore.WebUI.Controllers
                     ItemsPerPage = PageSize,
                     TotalItems = type == null ?
                         repository.Products.Count() :
-                        repository.Products.Where( e => e.Type == type).Count()
+                        repository.Products.Where(e => e.Type == type).Count()
 
                 },
 
@@ -51,7 +51,7 @@ namespace ComputerStore.WebUI.Controllers
         {
             Product prod = repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
-            if(prod != null)
+            if (prod != null)
             {
                 return File(prod.ImageData, prod.ImageMimeType);
             }
@@ -60,6 +60,5 @@ namespace ComputerStore.WebUI.Controllers
                 return null;
             }
         }
-       
     }
 }
